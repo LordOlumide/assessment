@@ -1,5 +1,4 @@
 import 'package:assessment/app/ui/widgets/circle_icon.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:assessment/app/ui/widgets/coloured_tile.dart';
 import 'package:assessment/app/core/themes.dart';
@@ -357,31 +356,35 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(
-                                  8.0, 18.0, 8.0, 8.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'UI Portofolio',
-                                    style: TextStyle(
-                                      fontSize: 23.0,
-                                      fontWeight: FontWeight.w600,
-                                      color: pureWhite,
+                            Align(
+                              alignment: Alignment.topCenter,
+                              child: Padding(
+                                padding: const EdgeInsets.fromLTRB(
+                                    8.0, 10.0, 8.0, 8.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'UI Portofolio',
+                                      style: TextStyle(
+                                        fontSize: 23.0,
+                                        fontWeight: FontWeight.w600,
+                                        color: pureWhite,
+                                      ),
                                     ),
-                                  ),
-                                  Text(
-                                    'See All',
-                                    style: TextStyle(
-                                      fontSize: 23.0,
-                                      fontWeight: FontWeight.w100,
-                                      color: lightGrey,
+                                    Text(
+                                      'See All',
+                                      style: TextStyle(
+                                        fontSize: 23.0,
+                                        fontWeight: FontWeight.w100,
+                                        color: lightGrey,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                             const SizedBox(height: 2.0),
@@ -394,59 +397,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                   return Row(
                                     children: [
                                       Expanded(
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Stack(
-                                            alignment: Alignment.center,
-                                            children: [
-                                              PortfolioItemWidget(
-                                                image: profileDataLoaded
-                                                    ? AssetImage(profile
-                                                        .dummy_portfolio_pics[0])
-                                                    : null,
-                                              ),
-                                              // TODO: Expand this container
-                                              profileDataLoaded
-                                                  ? Container(
-                                                      color: Colors.grey
-                                                          .withOpacity(0.2),
-                                                    )
-                                                  : const SizedBox.shrink(),
-                                              profileDataLoaded
-                                                  ? Text(
-                                                      'Read More',
-                                                      style: TextStyle(
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                            FontWeight.w300,
-                                                        color: pureWhite,
-                                                      ),
-                                                    )
-                                                  : const SizedBox.shrink(),
-                                            ],
-                                          ),
+                                        child: PortfolioItemWidget(
+                                          isSeeMoreTile: true,
+                                          image: profileDataLoaded
+                                              ? AssetImage(profile
+                                                  .dummy_portfolio_pics[0])
+                                              : null,
                                         ),
                                       ),
                                       Expanded(
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: PortfolioItemWidget(
-                                            image: profileDataLoaded
-                                                ? AssetImage(profile
-                                                    .dummy_portfolio_pics[1])
-                                                : null,
-                                          ),
+                                        child: PortfolioItemWidget(
+                                          image: profileDataLoaded
+                                              ? AssetImage(profile
+                                                  .dummy_portfolio_pics[1])
+                                              : null,
                                         ),
                                       ),
                                       Expanded(
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: PortfolioItemWidget(
-                                            image: profileDataLoaded
-                                                ? AssetImage(profile
-                                                    .dummy_portfolio_pics[2])
-                                                : null,
-                                          ),
+                                        child: PortfolioItemWidget(
+                                          image: profileDataLoaded
+                                              ? AssetImage(profile
+                                                  .dummy_portfolio_pics[2])
+                                              : null,
                                         ),
                                       ),
                                     ],
