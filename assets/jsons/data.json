@@ -1,0 +1,20 @@
+[{
+  "name": "Bima Sakti",
+  "location": "Tanjung Pinang",
+  "about": "I am a UI designer with a passion for creating intuitive and visually appealing user interfaces. I have a strong understanding of design principles and work closely with developers to bring my designs to life. I have had the opportunity to work with a variety of clients at a studio, and am always striving to improve my skills and stay up-to-date on the latest design trends.",
+  "profile_pic": "images/man_profile.jpg",
+  "min_clients": 40,
+  "min_handled_projects": 54,
+  "min_years_experience": 2,
+  "dummy_portfolio_pics": [
+    "images/websites.jpg",
+    "images/websites2.jpg",
+    "images/websites3.jpg"
+  ],
+  "social_icons": [
+    "assets/images/linkedin_icon.png",
+    "assets/images/basketball_small.jpg",
+    "assets/images/twitter_icon.png",
+    "assets/images/instagram_black_icon_small.jpg"
+  ]
+}]
